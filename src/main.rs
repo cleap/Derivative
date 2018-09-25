@@ -4,7 +4,7 @@ fn exp(val: f64) -> f64 {
 }
 
 fn deriv(fun: fn(f64)->f64, val: f64, del: f64) -> f64 {
-    (fun(val+del) - fun(val))/del
+    (fun(val+del) - fun(val-del))/(2.0*del)
 }
 
 fn main() {
